@@ -1,0 +1,45 @@
+#task 1
+git branch feature-newFunc
+git switch feature-newFunc
+git add .
+git commit
+git add .
+git commit 
+git rebase -i HEAD~2 (squash)
+git switch main
+git merge feature-newFunc
+
+#task 2
+git fetch 
+git switch experiment
+git log --oneline
+git cherry-pick 
+git switch main
+git cherry-pick d58314c
+git push origin main
+
+#task 3
+git switch dev
+git revert HEAD^1
+git add .
+git commit 
+git push
+
+#task 4
+git switch main 
+git add .
+git commit -m "Change frontend font-family"
+git switch feature-upload
+git diff main
+git switch main
+git merge feature-upload
+git commit 
+
+#task 5
+git switch documentation
+git log --oneline
+git rebase -i HEAD~4
+git switch main
+git merge documentation
+git push origin documentation --force
+git push origin main
